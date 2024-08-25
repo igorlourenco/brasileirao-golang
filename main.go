@@ -6,8 +6,11 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
+
+	"github.com/joho/godotenv"
 )
 
 type Match struct {
@@ -30,6 +33,12 @@ type Response struct {
 }
 
 func main() {
+	err := godotenv.Load(".env")
+
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", "https://v3.football.api-sports.io/fixtures", nil)
 
@@ -38,7 +47,7 @@ func main() {
 	}
 
 	req.Header.Add("x-rapidapi-host", "v3.football.api-sports.io")
-	req.Header.Add("x-rapidapi-key", "3506bef834adf16f3a3d9897fa385f67")
+	req.Header.Add("x-rapidapi-key", os.Getenv("API_KEY"))
 
 	brzao_league_id := 71
 	current_time := time.Now().Local()
