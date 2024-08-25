@@ -29,19 +29,6 @@ type Response struct {
 	Match []Match `json:"response"`
 }
 
-func reverseArray(arr []Match) {
-	start := 0
-	end := len(arr) - 1
-
-	for start < end {
-		// Swap the elements
-		arr[start], arr[end] = arr[end], arr[start]
-		// Move towards the middle
-		start++
-		end--
-	}
-}
-
 func main() {
 	client := &http.Client{}
 	req, err := http.NewRequest("GET", "https://v3.football.api-sports.io/fixtures", nil)
@@ -88,8 +75,6 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	reverseArray(match.Match)
 
 	parsedTime, err := time.Parse(time.RFC3339, match.Match[0].Fixture.Date)
 
