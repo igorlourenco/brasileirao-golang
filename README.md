@@ -1,3 +1,9 @@
+busca de dados do Brasileirão via CLI com Go 
+
+get data related to Brasileirão Série A with Go
+
+---
+
 get an api key from [api sports dashboard](https://dashboard.api-football.com/)  
 
 create a .env
