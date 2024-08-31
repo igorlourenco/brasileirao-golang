@@ -12,7 +12,7 @@ var rootCmd = &cobra.Command{
 	Short: "brzao is a cli tool for getting brzao data",
 	Long:  "brzao is a cli tool for getting brzao data",
 	Run: func(cmd *cobra.Command, args []string) {
-
+		fmt.Println("dados do brzao!")
 	},
 }
 
