@@ -1,6 +1,6 @@
 busca de dados do Brasileirão via CLI com Go 
 
-get data related to Brasileirão Série A with Go
+get data related to Brasileirão Série A via CLI with Go
 
 ---
 
