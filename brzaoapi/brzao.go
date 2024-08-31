@@ -1,4 +1,4 @@
-package brzao
+package brzaoapi
 
 import (
 	"encoding/json"

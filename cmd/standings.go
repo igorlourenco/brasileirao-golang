@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"igorlourenco/brzao/brzao"
+	brzao "igorlourenco/brzao/brzaoapi"
 
 	"github.com/spf13/cobra"
 )
